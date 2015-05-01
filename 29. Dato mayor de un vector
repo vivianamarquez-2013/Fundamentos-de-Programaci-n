@@ -1,0 +1,26 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+
+main()
+{
+      system("color f3");
+      int vec[10],pmay;
+      cout<<"Ingreso de datos:\n\n";
+      for(int i=0;i<10;i++)
+      {
+              cout<<"Pos["<<i<<"]=";
+              cin>>vec[i];
+              }
+      cout<<"\n\nLos datos ingresados son: \n";
+      for(int i=0;i<10;i++)
+      cout<<vec[i]<<" ";
+      pmay=0;
+      for(int i=1;i<10;i++)
+      {
+              if(vec[i]>vec[pmay])
+              pmay=i;
+              }
+      cout<<"\nEl mayor es "<<vec[pmay]<<" y est\xA0 en la posici\xA2n "<<pmay<<". \1";
+      getch();
+      }
