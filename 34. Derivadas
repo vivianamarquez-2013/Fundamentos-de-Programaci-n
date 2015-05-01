@@ -1,0 +1,134 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+#include<math.h>
+
+main()
+{
+      system("color 3f");
+      static float fun[10], der[9], c, men, may, x, term, funcion, derivativa, termd;
+      int e, exp, op;
+      char r;
+      cout<<"\7Ingrese una opci\xA2n:\n\nOpci\xA2n 1: Cargar funci\xA2n.\nOpci\xA2n 2: Mostrar funci\xA2n.\nOpci\xA2n 3: Evaluar funci\xA2n.\nOpci\xA2n 4: Mostrar derivativa.\nOpci\xA2n 5: Evaluar derivativa.\nOpci\xA2n 6: Salir.\n\n";
+      do 
+      {
+      cin>>op;
+              switch(op)
+              {
+              case 1: 
+                   cout<<"\nUsted eligi\xA2 la opci\xA2n 1.\n";
+                   
+                   do{
+                   cout<<"\n\nIngrese coeficiente y exponente de la funci\xA2n: ";
+                   cin>>c>>e;
+                   fun[e]=fun[e]+c;
+                   cout<<"\nDesea ingresar otro? (S/N) ";
+                   r=toupper(getche());
+                   }while(r!='N');
+             
+                   cout<<"\n\nIngrese otra opci\xA2n del men\xA3: ";
+                   break;
+              
+              case 2: 
+                   cout<<"\nUsted eligi\xA2 la opci\xA2n 2.\n";
+                   
+                   cout<<"\nLa funci\xA2n es:";
+                   for(int i=9;i>=0;i--)
+                   {
+                     if(fun[i]!=0)
+                     {
+                     
+                                  if(i==0)
+                                  men=may=fun[i];
+                                  if(fun[i]>may)
+                                  may=fun[i];
+                       
+                                  if(fun[i]==may)
+                                  cout<<" "<<fun[i]<<"X^"<<i;
+                                  else if(fun[i]>0)
+                                  cout<<" + "<<fun[i]<<"X^"<<i;
+                                  else
+                                  cout<<" "<<fun[i]<<"X^"<<i;
+                                  }}
+                                  
+                   cout<<"\n\nIngrese otra opci\xA2n del men\xA3: ";
+                   break;
+              
+              case 3: 
+                   cout<<"\nUsted eligi\xA2 la opci\xA2n 3.\n";
+                   cout<<"\n\nIngrese el valor de X: ";
+                   cin>>x;
+                   funcion=0;
+                   for(int i=9;i>=0;i--)
+                   {
+                     if(fun[i]!=0)
+                     {
+                                  
+                                  term=fun[e]*(pow(x,e));
+                                  funcion+=term;
+                                  
+                                  }
+                                  
+                                  }
+                                cout<<"\n\nFunci\xA2n igual a: "<<funcion;  
+                   
+                   cout<<"\n\nIngrese otra opci\xA2n del men\xA3: ";
+                   break;
+                   
+              case 4: 
+                   cout<<"\nUsted eligi\xA2 la opci\xA2n 4.\n";
+                   
+                   cout<<"\nLa derivativa es:";
+                   for(int i=8;i>=0;i--)
+                   {
+                     der[i]=fun[i]*i;
+                     exp=i-1;
+                     if(der[i]!=0)
+                     {
+                                  if(i==0)
+                                  men=may=der[i];
+                                  if(der[i]>may)
+                                  may=der[i];
+                       
+                                  if(der[i]==may)
+                                  cout<<" "<<der[i]<<"X^"<<exp;
+                                  else if(der[i]>0)
+                                  cout<<" + "<<der[i]<<"X^"<<exp;
+                                  else
+                                  cout<<" "<<der[i]<<"X^"<<exp;
+                                  }}
+                   
+                   cout<<"\n\nIngrese otra opci\xA2n del men\xA3: ";
+                   break;
+                   
+              case 5: 
+                   cout<<"\nUsted eligi\xA2 la opci\xA2n 5.\n";
+                   derivativa=0;
+                   for(int i=1;i<=9;i++)
+                   {
+                     if(der[i]!=0)
+                     {
+                                  
+                                  termd=der[e]*(pow(x,i));
+                                  }
+                                  derivativa+=termd;
+                                  }
+                                  cout<<"\n\nDerivativa igual a: "<<derivativa;
+                                  
+             
+                   cout<<"\n\nIngrese otra opci\xA2n del men\xA3: ";
+                   break;
+                    
+              case 6: cout<<"\7\nUsted eligi\xA2 la opci\xA2n 6, es decir, salir.\n\n\xADGracias por usar este programa! \1 \n\n";
+                   break;
+                   
+                   
+              default: cout<<"\7 \nOpci\xA2n no v\xA0lida. \n\nIngrese otra opci\xA2n del men\xA3: ";
+                       break;
+                       
+              }
+      
+      }while(op!=6);
+     
+              getch();
+}
