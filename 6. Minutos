@@ -1,0 +1,26 @@
+#include<iostream.h>
+
+main()
+{
+      int min,tar,total;
+      cout<<"Ingrese el n\xA3mero de minutos: ";
+      cin>>min;
+      if(min<0)
+      cout<<"N\xA3mero de minutos no v\xA0lido.\n";
+      else {
+           if(min<100)
+                      tar=300;
+           else if(min<200)
+                            tar=250;
+                else if (min<300)
+                                  tar=200;
+                     else
+                         tar=100;
+          total=tar*min;
+          system("cls");
+          cout<<"Sus "<<min<<" a una tarifa de $"<<tar<<" le cuestan $"<<total<<".\n";
+          }
+          
+          system("pause");
+          }           
+
