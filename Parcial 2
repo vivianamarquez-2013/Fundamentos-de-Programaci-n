@@ -1,0 +1,136 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+#include<windows.h>
+
+void colores(void);
+void parcial(void);
+void vector(void);
+
+main()
+{
+      
+     
+     parcial();
+     vector();
+     colores();
+     getch();
+      
+      }
+      
+void vector(void)
+{
+     int vec[99],n,y,x,z,j,suma=0,may=0,men=0,cont=0;
+      float prom=0;
+      FILE *datos;
+      if((datos=fopen("datos.txt","r")))
+      {
+      fscanf(datos,"%d",&n);
+
+cout<<"\n\nIngrese un numero a buscar: ";
+cin>>x;
+cout<<"\n\n"<<n;
+
+      cout<<"\n\nHorizontal: ";
+      for(int i=0;i<n;i++)
+            {
+			
+                       fscanf(datos,"%d",&y);
+                       
+                       suma+=y;
+                       prom=(float)suma/n;
+                       if(y==x)
+                       cont++;
+                       
+                       if(i==0)
+                       men=may=y;
+                       if(y>may)
+                       may=y;
+                       if(y<men)
+                       men=y;
+                       
+                       cout<<y<<" ";
+                       }   
+                          
+      //fprintf(salida,"\n\nCantidad de datos cargados: %d.\nSumatoria de los datos: %d.\nPromedio de los datos: %f.\nEl n˙mero mayor es: %d.\nEl n˙mero menor es: %d.\nX aparece %d veces.",n,suma,prom,may,men,cont);
+      
+      cout<<"\nEl numero mayor es: "<<may;
+      cout<<"\nEl numero menor es: "<<men;
+      cout<<"\nEl promedio es: "<<prom;
+      cout<<"\nEl numero "<<x<<" aparece: "<<cont<<" veces.";
+      
+      fclose(datos);
+      
+      cout<<"\nLos numeros mayores al promedio son: ";
+      fopen("datos.txt","r");
+      fscanf(datos,"%d",&j);
+      for(int i=0;i<n;i++)
+      {
+			
+                       fscanf(datos,"%d",&z);
+                       if(z>prom)
+                       cout<<z<<" ";
+                       }
+   
+   
+   
+   fclose(datos);
+      
+}
+else
+      {
+      cout<<"\nError de apertura de archivos.\7";
+                    }
+                    }
+                
+void colores(void)
+{
+      Sleep(100);
+      Sleep(100);
+      Sleep(100);
+      Sleep(100);
+      Sleep(100);
+      Sleep(100);
+      system("color 1f");
+      Sleep(100);
+      system("color 1f");
+      Sleep(100);
+      system("color 1f");
+      Sleep(100);
+      system("color 2f");
+      Sleep(100);
+      system("color 3f");
+      Sleep(100);
+      system("color 4f");
+      Sleep(100);
+      system("color 5f");
+      Sleep(100);
+      system("color 6f");
+      Sleep(100);
+      system("color 7f");
+      Sleep(100);
+      system("color 8f");
+      Sleep(100);
+      system("color 9f");
+      Sleep(100);
+      system("color 0f");
+      Sleep(100);
+      system("color 1f");
+      }
+      
+void parcial(void)
+{
+    cout<<"Bienvenido al Segundo Examen Parcial de Programaci\xA2n.\n\n";
+    cout<<"Nombre: Viviana Marcela Pena Marquez.\nCodigo: 614132005\n\n";
+    cout<<"Cargando parcial, por favor espere";
+             Sleep(2500);
+             cout<<".";
+             Sleep(2500);
+             cout<<".";
+             Sleep(2500);
+             cout<<".";
+             cout<<"\7";
+             Sleep(2500);
+             Sleep(2500);
+    
+}
