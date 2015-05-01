@@ -1,0 +1,34 @@
+#include<iostream.h>
+
+main()
+{
+      float A,B,C,D,E,F,G;
+      cout<<"Ingrese el valor de su compra: $";
+      cin>>A;
+      if(A<=0)
+      cout<<"\nValor no v\xA0lido.\n\n";
+      else {
+           if(A<=100000)
+                        cout<<"\nSu compra es de $"<<A<<".\n\n";
+           else if(A<=200000)
+                            {
+                            B=A*0.05;
+                            C=A-B;
+                            cout<<"\nSu compra de $"<<A<<" tiene un 5% de descuento.\nEl valor del descuento es de $"<<B<<". Su total a pagar es de $"<<C<<".\n\n"; 
+                            }
+                else if (A<=500000)
+                                   {
+                                   D=A*0.1;
+                                   E=A-D;
+                                   cout<<"\nSu compra de $"<<A<<" tiene un 10% de descuento.\nEl valor del descuento es de $"<<D<<". Su total a pagar es de $"<<E<<".\n\n";
+                                   }
+                     else 
+                          {
+                           F=A*0.15;
+                           G=A-G;
+                           cout<<"\nSu compra de $"<<A<<" tiene un 15% de descuento.\nEl valor del descuento es de $"<<F<<". Su total a pagar es de $"<<G<<".\n\n";  
+                           }
+           }     
+          system("pause");
+          }           
+
