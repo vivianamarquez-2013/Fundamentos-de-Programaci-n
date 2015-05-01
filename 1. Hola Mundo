@@ -1,0 +1,9 @@
+// Mi primer programa *.*
+
+#include<iostream.h>
+
+main()
+{
+      cout<<"Hola\nMundo\n\n";
+      system("pause");
+      }
