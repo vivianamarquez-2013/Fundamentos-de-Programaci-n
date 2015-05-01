@@ -1,0 +1,38 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+
+main()
+{
+      system("color 1f");
+      int num[20], rev[20], n, band=0;
+      cout<<"Ingrese el n\xA3mero de enteros a cargar: ";
+      cin>>n;
+      cout<<"\n";
+      for(int i=0;i<n;i++)
+      {
+              cout<<"Ingrese n\xA3mero: ";
+              cin>>num[i];
+              }
+      
+      cout<<"\n\nLos n\xA3meros ingresados son: \n";
+      for(int i=0;i<n;i++)
+      cout<<num[i]<<" ";
+      
+      band=0;
+      for(int i=0;i<n/2;i++)
+      {
+              if(num[i]!=num[n-i-1])
+              band++;
+              }
+      
+      if(band==0)
+      cout<<"\n\nEl n\xA3mero es palindromo. \7\1";
+      
+      else
+      cout<<"\n\nEl n\xA3mero no es palindromo. \7";
+      
+      
+              getch();
+              }
+      
