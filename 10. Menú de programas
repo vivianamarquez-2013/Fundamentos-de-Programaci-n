@@ -1,0 +1,41 @@
+#include<iostream.h>
+#include<conio.h>
+
+main()
+{
+      int op,x,y,area;
+      cout<<"MENU DE PROGRAMAS\n\n1.Par o Impar.\n2.Positivo\n3.Area rect\xA0ngulo.\n4.Salir\n\nDigite su opci\xA2n: ";
+      cin>>op;
+      system("cls");
+      switch(op)
+                {
+                     case 1: cout<<"Digite el n\xA3mero: ";
+                     cin>>x;
+                     if(x%2==0)
+                               cout<<"\nEl n\xA3mero es par.";
+                     else
+                         cout<<"\nEl n\xA3mero es impar.";
+                     break;
+                     
+                     case 2: cout<<"Digite el n\xA3mero: ";
+                     cin>>x;
+                     if(x>0)
+                            cout<<"\nEl n\xA3mero es positivo.";
+                     else
+                         cout<<"\nEl n\xA3mero no es postivo.";
+                     break;
+                     
+                     case 3: cout<<"Digite base y altura del rect\xA0ngulo:\n\n";
+                     cin>>x>>y;
+                     area=x*y;
+                     cout<<"\nEl \xA0rea es "<<area;
+                     break;
+                     
+                     case 4: cout<<"Gracias por usar mi programa :)";
+                     break;
+                     
+                     default: cout<<"Opci\xA2n no v\xA0lida.";
+                }
+                
+      getch();
+      }
