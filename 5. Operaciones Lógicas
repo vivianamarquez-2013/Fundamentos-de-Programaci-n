@@ -1,0 +1,80 @@
+#include<iostream.h>
+main()
+{
+      int a,b;
+      cout<<"Bienvenido al Programa de Operaciones L\xA2gicas.\n\n";
+      cout<<"Ingrese el valor de P.\n1 si es verdadero o 0 si es falso: ";
+      cin>>a;
+      cout<<"\n";
+      if(a!=1 & a!=0)
+      {
+              cout<<"Ingrese un valor v\xA0lido.\n\n";
+              }
+      else
+      {
+      cout<<"Ingrese el valor de Q.\n1 si es verdadero o 0 si es falso: ";
+      cin>>b;
+      cout<<"\n";
+      if(b!=1 & b!=0)
+      {
+              cout<<"Ingrese un valor v\xA0lido.";
+              }       
+              
+              if (a==1 & b==1)
+      {
+              cout<<"Conjuci\xA2n: Verdadero.\n";
+              cout<<"Disyunci\xA2n: Verdadero.\n";
+              cout<<"Negaci\xA2n Alterna: Falso.\n";
+              cout<<"Negaci\xA2n de la P: Falso.\n";
+              cout<<"Negaci\xA2n de la Q: Falso.\n";
+              cout<<"Negaci\xA2n Conjunta: Falso.\n";
+              cout<<"Condicional: Verdadero.\n";
+              cout<<"Bicondicional: Verdadero.\n";
+              cout<<"Disyunci\xA2n Exclusiva: Falso.\n";
+              }
+              
+              if (a==1 & b==0)
+      {
+              cout<<"Conjuci\xA2n: Falso.\n";
+              cout<<"Disyunci\xA2n: Verdadero.\n";
+              cout<<"Negaci\xA2n Alterna: Verdadero.\n";
+              cout<<"Negaci\xA2n de la P: Falso.\n";
+              cout<<"Negaci\xA2n de la Q: Verdadero.\n";
+              cout<<"Negaci\xA2n Conjunta: Falso.\n";
+              cout<<"Condicional: Falso.\n";
+              cout<<"Bicondicional: Falso.\n";
+              cout<<"Disyunci\xA2n Exclusiva: Verdadero.\n";
+              }      
+              
+              if (a==0 & b==1)
+      {
+              cout<<"Conjuci\xA2n: Falso.\n";
+              cout<<"Disyunci\xA2n: Verdadero.\n";
+              cout<<"Negaci\xA2n Alterna: Verdadero.\n";
+              cout<<"Negaci\xA2n de la P: Verdadero.\n";
+              cout<<"Negaci\xA2n de la Q: Falso.\n";
+              cout<<"Negaci\xA2n Conjunta: Falso.\n";
+              cout<<"Condicional: Verdadero.\n";
+              cout<<"Bicondicional: Falso.\n";
+              cout<<"Disyunci\xA2n Exclusiva: Verdadero.\n";
+              }   
+              
+              if (a==0 & b==0)
+      {
+              cout<<"Conjuci\xA2n: Falso.\n";
+              cout<<"Disyunci\xA2n: Falso.\n";
+              cout<<"Negaci\xA2n Alterna: Verdadero.\n";
+              cout<<"Negaci\xA2n de la P: Verdadero.\n";
+              cout<<"Negaci\xA2n de la Q: Verdadero.\n";
+              cout<<"Negaci\xA2n Conjunta: Verdadero.\n";
+              cout<<"Condicional: Verdadero.\n";
+              cout<<"Bicondicional: Verdadero.\n";
+              cout<<"Disyunci\xA2n Exclusiva: Falso.\n";
+              }                 
+      
+      cout<<"\n";
+      }
+                
+              
+      system("pause");
+      }
