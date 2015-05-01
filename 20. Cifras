@@ -1,0 +1,29 @@
+#include<iostream.h>
+#include<conio.h>
+
+main()
+{
+      int n;
+      cout<<"Ingrese un entero no mayor a 6 cifras: ";
+      cin>>n;
+      if(n<1000000)
+      {
+                   if (n<10)
+                   cout<<"\nSu n\xA3mero tiene 1 cifra.";
+                   else if (n<100)
+                   cout<<"\nSu n\xA3mero tiene 2 cifras.";
+                   else if (n<1000)
+                   cout<<"\nSu n\xA3mero tiene 3 cifras.";
+                   else if (n<10000)
+                   cout<<"\nSu n\xA3mero tiene 4 cifras.";
+                   else if (n<100000)
+                   cout<<"\nSu n\xA3mero tiene 5 cifras.";
+                   else
+                   cout<<"\nSu n\xA3mero tiene 6 cifras.";
+                   }
+      else
+      {
+          cout<<"\nN\xA3mero no v\xA0lido.";
+          }
+          getch();
+          }
