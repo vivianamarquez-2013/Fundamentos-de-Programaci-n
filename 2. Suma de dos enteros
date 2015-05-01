@@ -1,0 +1,13 @@
+#include<iostream.h>
+main()
+{
+      int a,b,c;
+      cout<<"Ingrese un entero: ";
+      cin>>a;
+      cout<<"Ingrese otro entero: ";
+      cin>>b;
+      c=a+b;
+      cout<<" \n";
+      cout<<"La suma de "<<a<<" + "<<b<<" es igual a "<<c<<" \n\n";
+      system("pause");
+      }
