@@ -1,0 +1,29 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+
+main()
+{
+      int n;
+      FILE *ent, *par, *imp;
+      if((ent=fopen("Datos.txt","r")) && (par=fopen("Pares.txt","w")) && (imp=fopen("Impares.txt","w")))
+      {
+      while(!feof(ent))
+      {
+                       fscanf(ent,"%d",&n);
+                       if(n%2==0)
+                       fprintf(par,"%d ",n);
+                       else
+                       fprintf(imp,"%d ",n);
+                       }
+      fclose(ent);
+      fclose(imp);
+      fclose(par);
+      cout<<"Los archivos han sido creados exitosamente.";
+      }
+      else
+      {
+      cout<<"Error de apertura de archivos.";
+      }
+      getch();
+}
