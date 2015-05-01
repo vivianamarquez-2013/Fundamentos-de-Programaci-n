@@ -1,0 +1,102 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+#include<c:\libreria2.h>
+
+/* int mayor(int a,b,c);
+float cociente(int d,e);
+int sumatoria(int f);
+*/
+
+/* 
+1. funcion: recibir 3 enteros y retorna el mayor.
+2. recibe 2 enteros y retorna su cociente. recibe a y b y retorna a/b
+3. recibe 1 entero y retorna la sumatoria desde 1 hasta ese entero, 
+*/
+
+main()
+{
+      system("color 1f");
+      int r,s,u,v,w,x,y,z;
+      float t;
+      
+      cout<<"Ingrese 3 enteros:\n\n";
+      cin>>x>>y>>z;
+      w=mayor(x,y,z);
+      cout<<"\nEl mayor de esos tres n\xA3meros es: "<<w;
+      
+      cout<<"\n\n\nIngrese numerador: ";
+      cin>>u;
+      cout<<"Ingrese denominador: ";
+      cin>>v;
+      t=cociente(u,v);
+      cout<<"La cociente es: "<<t;
+      
+      cout<<"\n\n\nIngrese un entero: ";
+      cin>>s;
+      r=sumatoria(s);
+      cout<<"La sumatoria desde el 1 hasta el entero es: "<<r;
+      
+      getch();
+      }
+
+/*
+
+int mayor(int a, int b, int c)
+{
+    int may;
+    may=a;
+    if(b>may)
+    may=b;
+    if(c>may)
+    may=c;
+    return may;
+    
+}
+
+float cociente(int d, int e)
+{
+    float res;
+    res=(float)d/(float)e;
+    return res;
+}
+
+int sumatoria(int f)
+{
+      int res=0;
+      for(int i=0;i<=f;i++)
+      res=res+i;
+      return res;
+}
+
+    
+   */  
+
+//// LIBRERIA 
+
+int mayor(int a, int b, int c)
+{
+    int may;
+    may=a;
+    if(b>may)
+    may=b;
+    if(c>may)
+    may=c;
+    return may;
+    
+}
+
+float cociente(int d, int e)
+{
+    float res;
+    res=(float)d/(float)e;
+    return res;
+}
+
+int sumatoria(int f)
+{
+      int res=0;
+      for(int i=0;i<=f;i++)
+      res=res+i;
+      return res;
+}
