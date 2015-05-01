@@ -1,0 +1,57 @@
+#include<iostream.h>
+#include<conio.h>
+
+main()
+{
+      int op;
+      float x,y;
+      cout<<"MENU DE CONVERSOR DE TEMPERATURAS\n\n1. De grados Fahrenheit a grados Celsius.\n2. De grados Farenheit a grados Kelvin.\n3. De grados Celsius a grados Fahrenheit.\n4. De grados Celsius a grados Kelvin.\n5. De grados Kelvin a grados Celsius.\n6. De grados Kelvin a grados Fahrenheit.\n7. Salir.\n\nDigite su opci\xA2n: ";
+      cin>>op;
+      switch(op)
+                {
+                     case 1: cout<<"\nDigite la temperatura: ";
+                     cin>>x;
+                     y=(x-32)*5/9;
+                     cout<<"La temperatura es de: "<<y;
+                     break;
+                     
+                     case 2: cout<<"\nDigite la temperatura: ";
+                     cin>>x;
+                     y=((x-32)*5/9)+273.15;
+                     cout<<"La temperatura es de: "<<y;
+                     break;
+                     
+                     case 3: cout<<"\nDigite la temperatura: ";
+                     cin>>x;
+                     y=(x*9/5)+32;
+                     cout<<"La temperatura es de: "<<y;
+                     break;
+                     
+                     case 4: cout<<"\nDigite la temperatura: ";
+                     cin>>x;
+                     y=x+273.15;
+                     cout<<"La temperatura es de: "<<y;
+                     break;
+                     
+                     case 5: cout<<"\nDigite la temperatura: ";
+                     cin>>x;
+                     y=x-273.15;
+                     cout<<"La temperatura es de: "<<y;
+                     break;
+                     
+                     case 6: cout<<"\nDigite la temperatura: ";
+                     cin>>x;
+                     y=((x-273.15)*9/5)+32;
+                     cout<<"La temperatura es de: "<<y;
+                     break;
+                     
+                     case 7: cout<<"\nBye!";
+                     break;
+                     
+                     default: cout<<"\nOpci\xA2n no v\xA0lida.";
+                }
+                
+                cout<<"\n\n\xAD Gracias por usar mi programa! :)";    
+                getch();
+      }     
+                     
