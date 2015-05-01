@@ -1,0 +1,41 @@
+#include<iostream.h>
+main()
+{
+      float A,B,C,D,E,F;
+      
+      cout<<"Ingrese el n\xA3mero de metros de agua que consumi\xA2: ";
+      cin>>A;
+      
+      if(A<0)
+      {
+             cout<<"\nIngrese un valor v\xA0lido.\n\n";
+             }
+       else
+       {      
+       if(A<=6)
+       {
+               cout<<"\nUsted consumi\xA2 "<<A<<" metros cubicos de \xA0gua. Su total a pagar es de $0.\n\n\xADGracias por usar este programa! :)\n\n";
+               }
+       
+       else
+       {
+       if (A<=10)
+       {
+                 B=A-6;
+                 C=B*5000;
+               cout<<"\nUsted consumi\xA2 "<<A<<" metros cubicos de \xA0gua. Su total a pagar es de $"<<C<<".\n\n\xADGracias por usar este programa! :)\n\n";
+               }
+       else
+       {
+           B=A-6;
+           C=B*5000;
+           D=A-10;
+           E=D*10000;
+           F=E+20000;
+              cout<<"\nUsted consumi\xA2 "<<A<<" metros cubicos de \xA0gua. Su total a pagar es de $"<<F<<".\n\n\xADGracias por usar este programa! :)\n\n";
+               }
+               }
+               }   
+               
+system("pause");
+}  
