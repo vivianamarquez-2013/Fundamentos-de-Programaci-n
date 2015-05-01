@@ -1,0 +1,22 @@
+#include<iostream.h>
+#include<conio.h>
+
+main()
+{
+      int op;
+      { system("cls");
+      cout<<"1. Programa1\n2. Programa2\n3. Programa3\nSalir\n\nDigite una opci\xA2n: ";
+      cin>>op;
+      switch(op)
+      {
+                case 1: cout<<"\nPrograma 1 en construcci\xA2n.\n\n";
+                break;
+                case 2: cout<<"\nPrograma 2 en construcci\xA2n.\n\n";
+                break;
+                case 3: cout<<"\nHasta Pronto!";
+                break;
+                default: cout<<"\nOpci\xA2n no v\xA0lida.\n\n";
+      }
+      getch();
+      };
+}
