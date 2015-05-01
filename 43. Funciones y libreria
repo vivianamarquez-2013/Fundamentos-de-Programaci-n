@@ -1,0 +1,70 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+#include<c:\milibreria.h>
+
+/* int factorial(int a);
+float potencia(float b, int e);
+
+1. funcion: recibir 3 enteros y retorna el mayor.
+2. recibe 2 enteros y retorna su cociente. recibe a y b y retorna a/b
+3. recibe 1 entero y retorna la sumatoria desde 1 hasta ese entero, 
+*/
+
+main()
+{
+      system("color 1f");
+      int x,y,z;
+      float w,p;
+      
+      cout<<"Ingrese entero: ";
+      cin>>x;
+      y=factorial(x);
+      cout<<"El factorial de "<<x<<" es "<<y;
+      
+      cout<<"\n\nIngrese base: ";
+      cin>>w;
+      cout<<"Ingrese exponente: ";
+      cin>>z;
+      p=potencia(w,z);
+      cout<<"La potencia es: "<<p;
+      
+      getch();
+      }
+
+/* int factorial(int a)
+{
+    int res=1;
+    for(int i=1;i<=a;i++)
+    res=res*i;
+    return res;
+}
+
+float potencia(float b, int e)
+{
+    float res=1;
+    for(int i=1;i<=e;i++)
+    res=res*b;
+    return res;
+}
+ 
+      */
+
+/// Milibreria.h
+
+int factorial(int a)
+{
+    int res=1;
+    for(int i=1;i<=a;i++)
+    res=res*i;
+    return res;
+}
+
+float potencia(float b, int e)
+{
+    float res=1;
+    for(int i=1;i<=e;i++)
+    res=res*b;
+    return res;
+}
+ 
