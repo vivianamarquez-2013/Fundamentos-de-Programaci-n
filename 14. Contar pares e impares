@@ -1,0 +1,21 @@
+#include<iostream.h>
+#include<conio.h>
+
+main()
+{
+      int x, contpar=0, contimpar=0;
+      do {
+      cout<<"Ingrese un entero diferente a cero: ";
+      cin>>x;
+      if(x%2==0 & x!=0)
+      {
+          contpar ++;
+          }
+      else if(x!=0)
+      {
+          contimpar ++;
+          }
+      }while(x!=0);
+      cout<<"\nCantidad de pares: "<<contpar<<"\nLa cantidad de impares: "<<contimpar;
+      getch();
+}
