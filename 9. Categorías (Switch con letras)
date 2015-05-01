@@ -1,0 +1,20 @@
+#include<iostream.h>
+#include<conio.h>
+
+main()
+{
+      char cat;
+      cout<<"Ingrese su categoria: ";
+      cin>>cat;
+      switch (cat)
+      {
+             case 'A': cout<<"\n\nUsted gana entre 1 y 2 salarios m\xA1nimos.\n\n";
+                       break;
+             case 'B': cout<<"\n\nUsted gana entre 3 y 4 salarios m\xA1nimos.\n\n";
+                       break;
+             case 'C': cout<<"\n\nUsted gana m\xA0s de 5 salarios m\xA1nimos.\n\n";
+                       break;
+             default: cout<<"\n\nCategoria no v\xA0lida.\n\n";
+             }
+             system("pause");
+             }
