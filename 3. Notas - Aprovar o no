@@ -1,0 +1,20 @@
+#include<iostream.h>
+main()
+{
+      int nota;
+      cout<<"Ingrese su nota: ";
+      cin>>nota;
+      cout<<"\n";
+      if (nota>=30)
+      {
+                   cout<<"Usted aprob\xA2. ";
+                   cout<<"Felicitaciones!";
+                   }           
+      else
+      {
+          cout<<"Usted reprob\xA2. ";
+          cout<<"Estudie.";
+          }
+      cout<<"\n\n";
+      system("pause");
+      }
