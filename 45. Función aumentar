@@ -1,0 +1,27 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+
+
+int aumentar(int x);
+
+
+main()
+{
+      system("color 1f");
+      int a,b;
+      cin>>a;
+      b=aumentar(a);
+      cout<<"a= "<<a<<" b= "<<b;
+      
+      getch();
+      }
+
+
+
+int aumentar(int x)
+{
+    x++;
+    return x;
+    
+}
