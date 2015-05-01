@@ -1,0 +1,20 @@
+#include<iostream.h>
+#include<conio.h>
+
+main()
+{
+      int num,a=0,b;
+      cout<<"Este programa sumara los digitos pares de un \xA3mero.\n\nIngrese un n\xA3mero entero: ";
+      cin>>num;
+      
+      for(;num!=0;)
+      {
+                   if((num%10)%2==0)
+                   a+=num%10;
+                   num/=10;
+      }
+      
+      cout<<"\nLa suma de los digitos pares es de: "<<a;
+
+getch();
+}
