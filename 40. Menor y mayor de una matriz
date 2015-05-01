@@ -1,0 +1,40 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+
+main()
+{
+      system("color 1f");
+      int M[3][4];
+      int may, men;
+      for (int i=0;i<3;i++)
+      for (int j=0;j<4;j++)
+      {
+          cout<<"Ingrese el valor de la poscici\xA2n "<<i<<" "<<j<<" : ";
+          cin>>M[i][j];
+          }
+         
+          cout<<"\n\nLa matriz ingresada es:\n\n";
+          for (int i=0;i<3;i++)
+          {
+              for (int j=0;j<4;j++)
+              cout<<" "<<M[i][j];
+              cout<<"\n";
+              }
+              
+          
+          may=men=M[0][0];
+          for (int i=0;i<3;i++)
+          for (int j=0;j<4;j++)
+          {
+          if(M[i][j]>may)
+          may=M[i][j];
+          if(M[i][j]<men)
+          men=M[i][j];
+          }
+         
+         cout<<"\n\nEl mayor es: "<<may<<M[i][j];
+         cout<<"\nEl menor es: "<<men;
+              
+getch();
+}
