@@ -1,0 +1,28 @@
+#include<iostream.h>
+main()
+{
+      int a,b;
+      float c,d,e,f,g;
+      cout<<"Ingrese un entero: ";
+      cin>>a;
+      cout<<"Ingrese otro entero: ";
+      cin>>b;
+      cout<<"\n";
+      c=a+b;
+      d=a-b;
+      e=a*b;
+      cout<<" "<<a<<" + "<<b<<" = "<<c<<" \n";
+      cout<<" "<<a<<" - "<<b<<" = "<<d<<" \n";
+      cout<<" "<<a<<" * "<<b<<" = "<<e<<" \n";      
+      if(b!=0)
+      {
+              f=(float)a/b;
+              g=a%b;
+              cout<<" "<<a<<" / "<<b<<" = "<<f<<" \n";
+              cout<<" "<<a<<" % "<<b<<" = "<<g<<" \n\n";
+              }
+      
+
+      
+      system("pause");
+      }
