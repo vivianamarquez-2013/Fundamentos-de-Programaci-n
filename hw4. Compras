@@ -1,0 +1,15 @@
+#include<iostream.h>
+main()
+{
+      int a,b,c,d;
+      cout<<"Ingrese el n\xA3mero de cuadernos que \xA3sted desea comprar: ";
+      cin>>a;
+      cout<<"Ingrese el n\xA3mero de l\xA0pices que \xA3sted desea comprar: ";
+      cin>>b;
+      cout<<"Ingrese el n\xA3mero de libros que \xA3sted desea comprar: ";
+      cin>>c;
+      cout<<"\n";
+      d=(a*5000)+(b*1000)+(c*15000);
+      cout<<"El total del valor de su compra es de: $"<<d<<" \n\n";
+      system("pause");
+      }
