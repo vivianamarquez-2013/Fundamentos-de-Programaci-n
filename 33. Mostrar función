@@ -1,0 +1,29 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+
+main()
+{
+      system("color 3f");
+      static float fun[10], der[9], c;
+      int e;
+      char r;
+      do{
+             cout<<"\n\nIngrese coeficiente y exponente de la funci\xA2n: ";
+             cin>>c>>e;
+             fun[e]=fun[e]+c;
+             cout<<"\nDesea ingresar otro? (S/N) ";
+             r=toupper(getche());
+             }while(r!='N');
+             
+             cout<<"\n\nLa funci\xA2n es: ";
+             for(int i=9;i>=0;i--)
+             {
+                     if(fun[i]!=0)
+                     {
+                                  cout<<" "<<fun[i]<<"X^"<<i;
+                                  }
+                                  }
+                                  cout<<"\n\n";
+                                  system("pause");
+}
