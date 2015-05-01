@@ -1,0 +1,52 @@
+#include<iostream.h>
+main()
+{
+      float L,W,H,B,C,D,A,V;
+      
+      cout<<"Ingrese el largo de la l\xA0mina: ";
+      cin>>L;
+      
+      if(L<=0)
+      {
+              cout<<"Ingrese un valor v\xA0lido.\n\n";
+              }
+      else
+      {
+          cout<<"Ingrese el ancho de la l\xA0mina: ";
+          cin>>W;
+          
+          
+      if(W<=0)
+          {
+                 cout<<"Ingrese un valor v\xA0lido.\n\n";
+              }
+      else  
+              {
+                    cout<<"Ingrese la altura de la l\xA0mina: ";
+          cin>>H;
+          
+          
+      if(H<=0)
+          {
+                 cout<<"Ingrese un valor v\xA0lido.\n\n";
+              }
+      
+      if(H<0.5*W | H<0.5*L)
+      {
+                 B=2*H*L;
+                 C=2*H*W;
+                 D=W*L;
+                 A=B+C+D;
+                 V=L*H*W;
+                 
+                 cout<<"\nSu caja tiene "<<L<<" de largo, "<<W<<" de ancho y "<<H<<" de alto.\nEl \xA0rea de la superficie de la caja (sin tapa superior) es de "<<A<<".\nEl volumen de la caja es de "<<V<<".\n\n\xADGracias por usar este programa! :)\n\n";
+                 }
+      else
+      {
+          cout<<"\nAltura de la caja no v\xA0lida para la l\xA0mina.\n\n";
+          }
+              }
+              }
+              
+system("pause");
+}  
