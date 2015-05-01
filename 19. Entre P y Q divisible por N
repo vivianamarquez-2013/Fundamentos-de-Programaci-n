@@ -1,0 +1,20 @@
+#include<iostream.h>
+#include<conio.h>
+
+main()
+{
+      int n, p, q;
+      cout<<"Ingrese un n\xA3umero: ";
+      cin>>n;
+      cout<<"Ingrese otros n\xA3umero: ";
+      cin>>p;
+      cout<<"Ingrese otros n\xA3umero: ";
+      cin>>q;
+          
+      for (int i=p; i<=q; i++)
+      {
+          if(i%n==0)
+          cout<<i<<" ";
+          }
+          getch();
+          }
