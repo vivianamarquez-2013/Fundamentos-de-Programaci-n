@@ -1,0 +1,271 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+#include<windows.h>
+
+
+void proyecto(void);
+void multiplicacion(int ca, int fb, int fa, int cb);
+
+
+main()
+{
+
+proyecto();
+
+// Cargar Matriz 1
+
+     int fa,ca;
+     FILE *matriz1;
+     matriz1=fopen("matriz1.txt","r");
+     
+     fscanf(matriz1,"%d",&fa);
+     fscanf(matriz1,"%d",&ca);
+     
+     int MA[fa][ca];
+     
+     for (int i=0;i<fa;i++)
+     for (int j=0;j<ca;j++)
+     {
+          fscanf(matriz1,"%d",&MA[i][j]);
+          }
+     
+     fclose(matriz1);
+     
+// Cargar Matriz 2
+
+     int fb,cb;
+     FILE *matriz2;
+     matriz2=fopen("matriz2.txt","r");
+     
+     fscanf(matriz2,"%d",&fb);
+     fscanf(matriz2,"%d",&cb);
+     
+     int MB[fb][cb];
+     
+     for (int i=0;i<fb;i++)
+     for (int j=0;j<cb;j++)
+     {
+          fscanf(matriz2,"%d",&MB[i][j]);
+          }
+           
+     fclose(matriz2);
+       
+// Funciones
+
+      multiplicacion(ca,fb,fa,cb); 
+      getch();
+
+}
+
+
+// Funciones fuera del main
+
+
+void multiplicacion(int ca, int fb, int fa, int cb)
+{
+
+// Cargar Matriz 1
+
+     
+     FILE *matriz1;
+     matriz1=fopen("matriz1.txt","r");
+     
+     fscanf(matriz1,"%d",&fa);
+     fscanf(matriz1,"%d",&ca);
+     
+     /*
+     cout<<"\n";
+     cout<<"\n";
+     cout<<fa;
+     cout<<ca;
+     cout<<"\n";
+     */
+     
+     int MA[fa][ca];
+     
+     for (int i=0;i<fa;i++)
+     for (int j=0;j<ca;j++)
+     {
+          fscanf(matriz1,"%d",&MA[i][j]);
+          }
+          
+     cout<<"La matriz 1 es:\n\n";
+     for (int i=0;i<fa;i++)
+     {
+         for (int j=0;j<ca;j++)
+         {
+         cout<<" "<<MA[i][j];
+         if(MA[i][j]<1000)
+         cout<<" ";
+         if(MA[i][j]<100)
+         cout<<" ";
+         if(MA[i][j]<10)
+         cout<<" ";
+         }
+         cout<<"\n";
+              }
+              
+            fclose(matriz1);  
+              
+// Cargar Matriz 2
+
+     
+     FILE *matriz2;
+     matriz2=fopen("matriz2.txt","r");
+     
+     fscanf(matriz2,"%d",&fb);
+     fscanf(matriz2,"%d",&cb);
+     
+     /*
+     cout<<"\n";
+     cout<<"\n";
+     cout<<fb;
+     cout<<cb;
+     cout<<"\n";
+     */
+     
+     int MB[fb][cb];
+     
+     for (int i=0;i<fb;i++)
+     for (int j=0;j<cb;j++)
+     {
+          fscanf(matriz2,"%d",&MB[i][j]);
+          }
+          
+     cout<<"\n\nLa matriz 2 es:\n\n";
+     for (int i=0;i<fb;i++)
+     {
+         for (int j=0;j<cb;j++)
+         {
+         cout<<" "<<MB[i][j];
+         if(MB[i][j]<1000)
+         cout<<" ";
+         if(MB[i][j]<100)
+         cout<<" ";
+         if(MB[i][j]<10)
+         cout<<" ";
+         }
+         cout<<"\n";
+              }
+
+fclose(matriz2);
+
+     // Verificar si se pueden multiplicar
+
+cout<<"\n\nDeterminando si las matrices se pueden multiplicar, por favor espere";
+             Sleep(1000);
+             cout<<".";
+             Sleep(1000);
+             cout<<".";
+             Sleep(1000);
+             cout<<".";
+             Sleep(2000);
+
+if(ca!=fb)
+{
+          cout<<"\n\nNo se puede realizar la multiplicaci\xA2n de las matrices.\n\nRaz\xA2n:\nEl n\xA3mero de columnas de la primera matriz es diferente al n\xA3mero de filas de la segunda matriz.";
+          system("color 0C");
+          cout<<"\n\nEl archivo vivianamarcela_penamarquez.txt ha sido creado exitosamente. \1";
+          Beep(300,500);
+          
+          FILE *salida;
+salida=fopen("vivianamarcela_penamarquez.txt","w");
+fprintf(salida,"Nombre: Viviana Marcela PeÒa M·rquez.\nCÛdigo: 614132005.\n\nPROYECTO FINAL DE PROGRAMACI”N\n\n");
+fprintf(salida,"Las matrices no se pueden multiplicar.\nRAZ”N: El n˙mero de columnas de la primera matriz es diferente al n˙mero de filas de la segunda matriz.\n");
+fclose(salida);
+
+          }
+
+else
+{
+    cout<<"\n\nS\xA1 se puede realizar la multiplicaci\xA2n de las matrices.";
+    system("color 0A");
+    Beep(500,700);
+          
+    int MM[fa][cb];
+    
+    for(int i=0;i<fa;i++)
+    for(int j=0;j<fb;j++)
+    {
+                     MM[i][j]=0;
+                     for(int k=0;k<ca;k++)
+                     {
+                                      MM[i][j]=(MM[i][j]+(MA[i][k]*MB[k][j]));
+                                      }
+                                      }
+                                      
+    cout<<"\n\nResultado multiplicaci\xA2n de matrices:\n\n";
+     for (int i=0;i<fa;i++)
+     {
+         for (int j=0;j<cb;j++)
+         {
+         cout<<" "<<MM[i][j];
+         if(MM[i][j]<1000)
+         cout<<" ";
+         if(MM[i][j]<100)
+         cout<<" ";
+         if(MM[i][j]<10)
+         cout<<" ";
+         }
+         cout<<"\n";
+              }
+
+
+// fprint
+
+FILE *salida;
+salida=fopen("vivianamarcela_penamarquez.txt","w");
+fprintf(salida,"Nombre: Viviana Marcela PeÒa M·rquez.\nCÛdigo: 614132005.\n\nPROYECTO FINAL DE PROGRAMACI”N\n\n");
+fprintf(salida,"Las matrices sÌ se pueden multiplicar.\n\n");
+fprintf(salida,"RESULTADO:\n\n");
+
+
+ for (int i=0;i<fa;i++)
+     {
+         for (int j=0;j<cb;j++)
+         {
+         fprintf(salida," %d",MM[i][j]);
+         if(MM[i][j]<1000)
+         fprintf(salida," ");
+         if(MM[i][j]<100)
+         fprintf(salida," ");
+         if(MM[i][j]<10)
+         fprintf(salida," ");
+         }
+         fprintf(salida,"\n");
+              }
+fclose(salida);
+
+cout<<"\nEl archivo vivianamarcela_penamarquez.txt ha sido creado exitosamente. \1";
+}
+
+}
+
+//
+
+void proyecto(void)
+{
+    system("color 0D");
+    cout<<"\n\n\nBienvenido al Proyecto Final de Programaci\xA2n \n\n\n";
+    cout<<"Nombre: Viviana Marcela Pe\xA4";
+    cout<<"a M\xA0rquez\nC\xA2";
+    cout<<"digo: 614132005";
+    cout<<"\n\nClase: Fundamentos de Programaci\xA2n \nProfesor: Nelson Vargas \nInstituci\xA2n: Fundaci\xA2n Universitaria Konrad Lorenz\n\n\n";
+    cout<<"Cargando proyecto, por favor espere";
+             Sleep(1500);
+             cout<<".";
+             Sleep(1500);
+             cout<<".";
+             Sleep(1500);
+             cout<<".";
+             Sleep(2000);
+             cout<<"\7";
+             system("cls");
+             system("color 07");
+}
+
+
+
+
+
