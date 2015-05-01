@@ -1,0 +1,15 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+
+main()
+{
+      FILE *archs;
+      archs=fopen("Salida.txt","a");
+      for(int i=1; i<=5; i++)
+      fprintf(archs,"%d. Hola Mundo\n\n", i);
+      fclose(archs);
+      cout<<"\7El archivo ha sido creado exitosamente.";
+      getch();
+}
+      
