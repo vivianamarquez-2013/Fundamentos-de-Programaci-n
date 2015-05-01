@@ -1,0 +1,89 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+#include<windows.h>
+
+
+void colores(void);
+void cargarvector(int V[], int n);
+void mostrarvector(int V[], int n);
+
+main()
+{
+      int vector[10];
+      cargarvector(vector,10);
+      mostrarvector(vector,10);
+      
+      colores();
+      getch();
+      }
+
+
+void cargarvector(int V[], int n)
+{
+     for(int i=0;i<n;i++)
+     {
+             cout<<"Ingrese valor de la pos "<<i<<" = ";
+             cin>>V[i];
+             }
+             }
+             
+void mostrarvector(int V[], int n)
+{
+     cout<<"\n";
+     for(int i=0;i<n;i++)
+     {
+             Sleep(300);
+             cout<<" "<<V[i];
+             Sleep(300);
+             cout<<".";
+             Sleep(300);
+             cout<<".";
+             Sleep(300);
+             cout<<".";
+             cout<<"\7";
+             }
+             }
+             
+             
+
+void colores(void)
+{
+     system("color 1f");
+      Sleep(100);
+      system("color 2f");
+      Sleep(100);
+      system("color 3f");
+      Sleep(100);
+      system("color 4f");
+      Sleep(100);
+      system("color 5f");
+      Sleep(100);
+      system("color 6f");
+      Sleep(100);
+      system("color 7f");
+      Sleep(100);
+      system("color 8f");
+      Sleep(100);
+      system("color 9f");
+      Sleep(100);
+      system("color 0f");
+      Sleep(100);
+      system("color Af");
+      Sleep(100);
+      system("color Bf");
+      Sleep(100);
+      system("color Cf");
+      Sleep(100);
+      system("color Df");
+      Sleep(100);
+      system("color Ef");
+      Sleep(100);
+      system("color Ff");
+      Sleep(100);
+      system("color 1f");
+      Beep(1000,1000); 
+      
+      }
+
+
