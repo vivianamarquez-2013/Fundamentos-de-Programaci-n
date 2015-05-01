@@ -1,0 +1,17 @@
+#include<iostream.h>
+#include<conio.h>
+
+main()
+{
+      int x, suma=0, cont=0;
+      do {
+      cout<<"Ingrese un entero entre 5 y 10: ";
+      cin>>x;
+      if(x>=5 & x<=10)
+      {cont ++;
+      suma=suma+x;
+      }
+      }while(cont!=2);
+      cout<<"La suma de ellos es: "<<suma;
+      getch();
+}
