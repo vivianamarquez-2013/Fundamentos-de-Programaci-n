@@ -1,0 +1,29 @@
+#include<iostream.h>
+
+main()
+{
+      int piso;
+      cout<<"Ingrese piso: ";
+      cin>>piso;
+      switch (piso)
+      {
+             case 1: cout<<"\nCafeteria.\n\n";
+                     break;
+             case 2: cout<<"\nBiblioteca.\n\n";
+                     break;
+             case 3: cout<<"\nSala de sistemas.\n\n";
+                     break;
+             case 4: cout<<"\nFacultad de Negocios.\n\n";
+                     break;
+             case 5: cout<<"\nFacultad de Pscicolog\xA1a.\n\n";
+                     break;
+             case 6: cout<<"\nFacultad de Ingenierias y Matem\xA0ticas. (\xAD\xAD\xADLa mejor!!!) ;) \n\n";
+                     break;
+             case 7: cout<<"\nTerraza.\n\n";
+                     break;
+             case 8: cout<<"\nRectoria.\n\n";
+                     break;
+             default: cout<<"\nPiso no habilitado.\n\n";
+             }
+             system("pause");
+             }
