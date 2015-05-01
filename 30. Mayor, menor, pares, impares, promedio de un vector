@@ -1,0 +1,65 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+
+main()
+{
+      system("color 3f");
+      int vec[10],pmay=0,pmen=0,suma=0,sumaa=0,cont=0;
+      float prom,proma;
+      cout<<"Ingreso de datos:\n\n";
+      
+      for(int i=0;i<10;i++)
+      {
+              cout<<"Pos["<<i<<"]=";
+              cin>>vec[i];
+              }
+      cout<<"\n\nLos datos ingresados son: \n";
+      for(int i=0;i<10;i++)
+      cout<<vec[i]<<" ";
+      
+      cout<<"\n\nLista de n\xA3meros pares ingresados: ";
+      for(int i=0;i<10;i++)
+      {
+              if(vec[i]%2==0 & vec[i]!=0)
+              cout<<vec[i]<<" ";
+              }
+      cout<<"\nLista de n\xA3meros impares ingresados: ";
+      for(int i=0;i<10;i++)
+      {
+              if(vec[i]%2!=0)
+              cout<<vec[i]<<" ";
+              }
+      
+      for(int i=1;i<10;i++)
+      {
+              if(vec[i]>vec[pmay])
+              pmay=i;
+              if(vec[i]<vec[pmen])
+              pmen=i;
+              }
+      cout<<"\n\nEl n\xA3mero mayor es "<<vec[pmay]<<" y est\xA0 en la posici\xA2n "<<pmay;
+      cout<<"\nEl n\xA3mero menor es "<<vec[pmen]<<" y est\xA0 en la posici\xA2n "<<pmen;
+      
+      for(int i=0;i<10;i++)
+      {
+              suma+=vec[i];
+              prom=(float)suma/10;
+              }
+      cout<<"\n\nEl promedio de los n\xA3meros es: "<<prom;
+      
+      cout<<"\nLista de n\xA3meros que estan por encima del promedio: ";
+      for(int i=0;i<10;i++)
+      {
+              if(vec[i]>prom)
+              {
+                             cout<<vec[i]<<" ";
+                             cont ++;
+                             sumaa+=vec[i];
+                             proma=(float)sumaa/cont;
+                             }
+                             }
+                             cout<<"\nEl promedio de los n\xA3meros que estan por encima del promedio es: "<<proma<<"\n\n\1\1\1\1\1\7";
+      
+      getch();
+      }
