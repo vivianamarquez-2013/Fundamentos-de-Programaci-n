@@ -1,0 +1,9 @@
+#include<iostream.h>
+#include<conio.h>
+
+main()
+{
+      int x;
+      cout<<"El valor de x es: "<<x;
+      getch();
+      }
