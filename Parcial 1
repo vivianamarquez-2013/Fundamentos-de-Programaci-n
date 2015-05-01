@@ -1,0 +1,67 @@
+#include<iostream.h>
+#include<conio.h>
+
+main()
+{
+      system("Color F");
+      int op, n, d, num=0, cont=0, suma=0;
+      float prom=0;
+      cout<<"\7Bienvenido al Primer Examen Parcial de Programaci\xA2n.\n";
+      cout<<"\nIngrese un n\xA3mero entero entre 1001 y 99999, que no sea m\xA3ltiplo de 10:\n\n";
+      cin>>n;
+      
+      do
+                   {
+                   d=n%10;
+                   if(d!=0)
+                   num=d+num*10;
+                   n=n/10;
+                   if(d!=0)
+                   cont ++;
+                   suma+=d;
+                   prom=(float)suma/cont;
+                   }while(n!=0);
+                   
+      cout<<"\n\nIngrese una opci\xA2n:\n\nOpci\xA2n 1: Cargar el n\xA3mero.\nOpci\xA2n 2: Eliminar ceros.\nOpci\xA2n 3: Promedio.\nOpci\xA2n 4: Salir\n\n";
+      do 
+      {
+      cin>>op;
+              switch(op)
+              {
+              case 1: 
+                   cout<<"\nUsted eligi\xA2 la opci\xA2n 1.\n";
+                   if(n>=1001 & n<=99999)
+                         { 
+                           if (n%10==0)
+                           cout<<"\7N\xA3mero no v\xA0lido. \n\nIngrese otra opci\xA2n del men\xA3: ";
+                           else
+                           cout<<"Su n\xA3mero es v\xA0lido.\n\nAhora ingrese otra opci\xA2n del men\xA3: ";
+                         }
+                         else cout<<"\7N\xA3mero no v\xA0lido. \n\nIngrese otra opci\xA2n del men\xA3: ";
+                   break;
+              
+              
+              case 2: 
+                   cout<<"\nUsted eligi\xA2 la opci\xA2n 2.\nSu n\xA3mero sin ceros es: "<<num<<"\n\nIngrese otra opci\xA2n del men\xA3: ";
+                   break;
+                   
+                   
+              case 3: 
+      
+                   cout<<"\nUsted eligi\xA2 la opci\xA2n 3.\nEl promedio de los d\xA1gitos del n\xA3mero resultante es: "<<prom<<"\n\nIngrese otra opci\xA2n del men\xA3: ";
+                   break;
+                   
+                   
+              case 4: cout<<"\7\nUsted eligi\xA2 la opci\xA2n 4, es decir, salir.\n\n\xADGracias por usar este programa! \1 \n\n";
+                   break;
+                   
+                   
+              default: cout<<"\7 \nOpci\xA2n no v\xA0lida. \n\nIngrese otra opci\xA2n del men\xA3: ";
+                       break;
+                       
+              }
+      
+      }while(op!=4);
+                            
+      getch();
+      }
