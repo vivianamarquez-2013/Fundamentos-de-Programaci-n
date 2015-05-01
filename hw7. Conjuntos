@@ -1,0 +1,179 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+
+main()
+{
+      system("color 3f");
+      int A[20],A2[20],B[20],U[40],n=0,nb,ns,c,d,swap;
+      FILE *ConA, *ConB, *salida, *salida2;
+      if((ConA=fopen("ConjuntoA.txt","r")) && (ConB=fopen("ConjuntoB.txt","r")) && (salida=fopen("vivianamarcela_penamarquez.txt","w")) && (salida2=fopen("union.txt","w")))
+      {
+      fprintf(salida,"Nombre: Viviana Marcela PeÒa M·rquez.\nCÛdigo: 614132005.\nFecha:  10-15-2013.\n\nTAREA DE ARREGLOS Y ARCHIVOS\n\n");
+      
+      
+    for(int i=0;i<20;i++)
+      {
+    while(!feof(ConA))
+            {
+			
+                      fscanf(ConA,"%d",&A[i]);
+                      n++;
+                      }
+                      }
+                      fclose(ConA);
+   
+          ConA=fopen("ConjuntoA.txt","r");
+   
+      fprintf(salida,"Conjunto A: ");
+      for(int c=0;c<20;c++)
+      {
+      while(!feof(ConA))
+            {
+                      for(c=0;c<n;c++)
+                      fscanf(ConA,"%d",&A[c]);
+ 
+                      for(c=0;c<(n-1);c++)
+                      {
+                      for(d=0;d<n-c-1;d++)
+                      {
+                      if(A[d]>A[d+1]) 
+                      {
+                      swap=A[d];
+                      A[d]=A[d+1];
+                      A[d+1]=swap;
+                      }
+                      }
+                      }
+ 
+                      for(c=0;c<n;c++)
+                      if(A[c]!=A[c-1])
+                      fprintf(salida,"%d ",A[c]);
+                      }}
+
+      
+      
+      for(int i=0;i<20;i++)
+      {
+      while(!feof(ConB))
+            {
+			
+                      fscanf(ConA,"%d",&B[i]);
+                      nb++;
+                      }
+                      }
+                      fclose(ConB);
+   
+                      ConB=fopen("ConjuntoB.txt","r");
+      
+      fprintf(salida,"\nConjunto B en orden: ");
+      for(int c=0;c<20;c++)
+      {
+      while(!feof(ConB))
+            {
+			
+                      nb=10;
+                      for(c=0;c<nb;c++)
+                      fscanf(ConB,"%d",&B[c]);
+ 
+                      for(c=0;c<(nb-1);c++)
+                      {
+                      for(d=0;d<nb-c-1;d++)
+                      {
+                      if(B[d]>B[d+1]) 
+                      {
+                      swap=B[d];
+                      B[d]=B[d+1];
+                      B[d+1]=swap;
+                      }
+                      }
+                      }
+ 
+                      for(c=0;c<nb;c++)
+                      if(B[c]!=B[c-1])
+                      fprintf(salida,"%d ",B[c]);
+                      }}
+      fclose(ConA);
+      fclose(ConB);
+      
+      ConA=fopen("ConjuntoA.txt","r");
+      ConB=fopen("ConjuntoB.txt","r");
+                       
+      fprintf(salida,"\nUnión: ");
+      for(int i=0;i<40;i++)
+      {
+              while(feof(ConB)&&feof(ConA))
+              
+      {
+                                     fscanf(ConA,"%d",&A[i]);
+                                     fscanf(ConB,"%d",&B[i]);
+                                     fprintf(salida2,"%d %d ",A[i],B[i]);
+                       }}
+          
+          salida2=fopen("union.txt","r");
+          
+          for(int i=0;i<40;i++)
+          {
+              while(!feof(salida2))
+              {
+                  
+                  fscanf(salida2,"%d",&U[i]);
+                  ns++;
+              }
+          }
+          fclose(salida2);
+          
+          salida2=fopen("union.txt","r");
+          
+          fprintf(salida,"Unión: ");
+          for(int c=0;c<40;c++)
+          {
+              while(!feof(salida2))
+              {
+                  for(c=0;c<ns;c++)
+                      fscanf(salida2,"%d",&U[c]);
+                  
+                  for(c=0;c<(ns-1);c++)
+                  {
+                      for(d=0;d<ns-c-1;d++)
+                      {
+                          if(U[d]>U[d+1])
+                          {
+                              swap=U[d];
+                              U[d]=U[d+1];
+                              U[d+1]=swap;
+                          }
+                      }
+                  }
+                  
+                  for(c=0;c<ns;c++)
+                      if(U[c]!=U[c-1])
+                          fprintf(salida,"%d ",U[c]);
+              }}
+          
+
+          
+                       
+      fprintf(salida,"\nIntersección: ");
+      for(int i=0;i<20;i++)
+      {
+              while(!feof(ConB)&&!feof(ConA))
+              
+      {
+                                     fscanf(ConA,"%d",&A[i]);
+                                     fscanf(ConB,"%d",&B[i]);
+                                     if(A[i]!=B[i])
+                                     fprintf(salida,"%d %d ",A[i],B[i]);
+                       }}
+                       
+      
+      
+      fclose(ConA);
+      fclose(ConB);
+      fclose(salida);
+      cout<<"\nEl archivo vivianamarecela_penamarquez.txt ha sido creado exitosamente. \1\7";
+      } 
+      else
+      cout<<"\nError de apertura de archivos.\7";
+      getch();
+}
