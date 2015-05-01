@@ -1,0 +1,57 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+
+main()
+{
+      system("color 3f");
+      char secreta[20], publica[20], c;
+      int tam, ac=0, err=0, bandera=0;
+      cout<<"Ingrese la palabra secreta: ";
+      for(int i=0;i<20;i++)
+      {
+              tam=i;
+              c=getch();
+              if(c=='.')
+              break;
+              else
+              publica[i]='-';
+              secreta[i]=c;
+              cout<<"*";
+              }
+             /* for(int i=0;i<tam;i++)
+              cout<<publica[i];*/
+              system("cls");
+            	  while(ac<tam)
+              {
+                          cout<<" ";
+                          for(int i=0;i<tam;i++)
+                                  cout<<publica[i];
+                                  cout<<" N\xA3mero de aciertos: "<<ac;
+                                  cout<<" N\xA3mero de errores: "<<err;
+                          cout<<"\nIngrese letra: ";
+                          c=getche();
+                          bandera=0;
+                          for(int i=0;i<tam;i++)
+                          {
+                                 
+                                  if(secreta[i]==c & publica[i]!=c)
+                                  {
+                                                   ac++;
+                                                   publica[i]=c;
+                                                   bandera++;
+                                                   }
+                                                   }
+                                 if(bandera==0)
+                                 err++;
+                                               }
+              
+                          cout<<"\n\nCongrats!!! \1 \7 \n\nLa palabra secreta es: ";
+                          for(int i=0;i<tam;i++)
+                                  cout<<publica[i];
+                                  
+                                   system("color 3f");
+
+              //cout<<"\n\nLo sentimos. Usted perdio.";
+              getch();
+}
