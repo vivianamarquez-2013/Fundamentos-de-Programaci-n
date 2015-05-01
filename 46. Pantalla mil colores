@@ -1,0 +1,57 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+#include<windows.h>
+
+void saludar(void);
+
+main()
+{
+      system("color 1f");
+      Sleep(100);
+      system("color 2f");
+      Sleep(100);
+      system("color 3f");
+      Sleep(100);
+      system("color 4f");
+      Sleep(100);
+      system("color 5f");
+      Sleep(100);
+      system("color 6f");
+      Sleep(100);
+      system("color 7f");
+      Sleep(100);
+      system("color 8f");
+      Sleep(100);
+      system("color 9f");
+      Sleep(100);
+      system("color 0f");
+      Sleep(100);
+      system("color Af");
+      Sleep(100);
+      system("color Bf");
+      Sleep(100);
+      system("color Cf");
+      Sleep(100);
+      system("color Df");
+      Sleep(100);
+      system("color Ef");
+      Sleep(100);
+      system("color Ff");
+      Sleep(100);
+      system("color 1f");
+
+      saludar();
+      
+      getch();
+      }
+
+
+
+
+void saludar(void)
+{
+    cout<<"Ola k Ase";
+    
+}
+
