@@ -1,0 +1,20 @@
+#include<iostream.h>
+#include<conio.h>
+
+main()
+{
+      int x=0,suma=0,cont=0;
+      float prom=0;
+      do {
+      cout<<"Ingrese un entero no negativo: ";
+      cin>>x;
+      if(x>=0)
+      {cont ++;
+      suma=suma+x;
+      }
+      }while(x>0);
+      if(cont!=0)
+                 prom=(float)suma/cont;
+      cout<<"\nCantidad de datos: "<<cont<<"\nSumatoria: "<<suma<<"\nPromedio: "<<prom;
+      getch();
+}
