@@ -1,0 +1,47 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+
+main()
+{
+      system("color 3f");
+      int vec[98],n,y,x,suma=0,may=0,men=0,cont=0;
+      float prom=0;
+      FILE *datos, *salida;
+      if((datos=fopen("datos.txt","r")) && (salida=fopen("viviana_marquez.txt","w")))
+      {
+            fprintf(salida,"Nombre: Viviana M·rquez.\nCÛdigo: 614132005.\nFecha:  09-30-2013.\n\nTAREA\n\n");
+            fscanf(datos,"%d",&n);
+            fscanf(datos,"%d",&x);
+            for(int i=1;i<=n;i++)
+            {
+			
+                       fscanf(datos,"%d",&vec[i]);
+                       
+                       
+                       suma+=vec[i];
+                       prom=(float)suma/n;
+                       if(vec[i]==x)
+                       cont++;
+                       
+                       if(i==1)
+                       men=may=vec[i];
+                       if(vec[i]>may)
+                       may=vec[i];
+                       if(vec[i]<men)
+                       men=vec[i];
+                       
+                       fprintf(salida,"%d ",vec[i]);
+                       }   
+                          
+      fprintf(salida,"\n\nCantidad de datos cargados: %d.\nSumatoria de los datos: %d.\nPromedio de los datos: %f.\nEl n˙mero mayor es: %d.\nEl n˙mero menor es: %d.\nEl n˙mero %d aparece %d veces.",n,suma,prom,may,men,x,cont);
+      
+      fclose(salida);
+      cout<<"\nEl archivo viviana_marquez.txt ha sido creado exitosamente. \1\7";
+      }
+      else
+      {
+      cout<<"\nError de apertura de archivos.\7";
+      }
+      getch();
+}
