@@ -1,0 +1,7 @@
+#include<iostream.h>
+
+main()
+{
+      cout<<"Fundaci\xA2n\n     Universitaria\n          Konrad\n               Lorenz\n\n";
+      system("pause");
+      }
