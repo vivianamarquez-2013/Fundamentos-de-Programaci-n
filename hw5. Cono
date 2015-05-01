@@ -1,0 +1,13 @@
+#include<iostream.h>
+main()
+{
+      float a,b,c;
+      cout<<"Ingrese el radio del cono: ";
+      cin>>a;
+      cout<<"Ingrese la altura del cono: ";
+      cin>>b;
+      cout<<"\n";
+      c=(3.14*a*a*b)/3;
+      cout<<"El volumen del cono es de apr\xA2ximadamente: "<<c<<" \n\n";
+      system("pause");
+      }
