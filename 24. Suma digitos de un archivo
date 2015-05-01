@@ -1,0 +1,19 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+
+main()
+{
+      FILE *arch;
+      int x, suma=0;
+      arch=fopen("C:\\Datos.txt","r");
+      for(int i=1;i<=5;i++)
+      {
+                          fscanf(arch,"%d",&x);
+                          suma+=x;
+      }
+      cout<<suma;
+      fclose(arch);
+      getch();
+}
+      
