@@ -1,0 +1,15 @@
+// El primer for que hice. No tengo ni idea porque lo hice tan raro.
+
+#include<iostream.h>
+#include<conio.h>
+
+main()
+{
+      int i=85;
+      for (int i=10; i>0; i--)
+      {
+          cout<<" "<<i;
+          }
+          cout<<"\nEl valor final de i es "<<i;
+          getch();
+          }
